@@ -40,8 +40,11 @@
     9.1 - Pelo terminal, entrar na pasta raiz do projeto.
     9.2 - Iniciar o yarn pelo comando “yarn init”
     9.3 - Instalar as dependências “yarn add @babel/preset-env”, “yarn add @babel/cli”, “yarn add @babel/core”. Isso fará com que sejam criados alguns arquivos e pastas no projeto.
-    9.4 - Dentro do arquivo package.json adicionar após “dependencies”:
-    "scripts": {
-        "dev": "babel ./main.js -o bundle.js -w"
-      }
+    9.4 - Criar um arquivo de nome “.babelrc” e adicionar o seguinte “ { “presets”: ["@babel/preset-env"] } ”
+	9.5 - Dentro do arquivo package.json adicionar após “dependencies”:
+	"scripts": {
+    	"dev": "babel ./main.js -o bundle.js -w"
+  	}
     Isso irá criar um ‘comando’ para o yarn chamado dev, que por meio do babel, irá pegar o arquivo main.js e transformar todo o código dele de forma que navegadores mais antigos, também possam ler o código do JS. A opção “-w” no fim do arquivo faz com que o terminal fique monitorando e adicionando as mudanças em tempo real no arquivo bundle.js.
+    
+10. A partir daí tudo deve estar configurado e podemos começar criando os primeiros arquivos do projeto, o main.js e o index.html
